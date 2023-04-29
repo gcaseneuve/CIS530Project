@@ -17,6 +17,6 @@ for i in range(1480, 2010, 10):
     eq_avg.append(df.loc[filterIdx]['Average Magnitude'].mean())
     eq_cnt.append(df.loc[filterIdx]['Count'].sum())
     year.append(i)
-dataset = {'Year': year, 'Count': eq_cnt}
+dataset = {'Year': year, 'Avg Mag': eq_avg}
 df = pd.DataFrame(dataset)
 df.to_csv('reg_data.csv', index= False)
